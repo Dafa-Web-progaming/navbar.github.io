@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <title>Bakso Mang Ikin | Rasanya Nampol, Bikin Ketagihan!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* conttainer 1 */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 1.2rem 11rem;
+        /* margin: 0.5rem; */
+        background-color: #ffff;
+        /* position: fixed; */
+        border-bottom: 1px solid #000;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 99;
+      }
+      .utama1 h1 {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-size: 2.3rem;
+        padding-right: 0rem;
+      }
+      .nav-list {
+        display: flex;
+        padding-right: 0rem;
+        gap: 20px;
+      }
+      .icon {
+        display: none;
+      }
+      .nav-list a {
+        position: relative;
+        text-decoration: none;
+        list-style: none;
+        color: #000;
+        font-family: sans-serif;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        padding: 5px;
+        /* margin: 5px; */
+      }
+      .nav-list a:hover {
+        background-color: #444;
+        border-radius: 10px;
+        color: #ffff;
+        transition: 0.5s;
+      }
+      /* responsive navbar ( Container 1) */
+      @media screen and (max-width: 768px) {
+        nav {
+          padding: 1rem 1.5rem;
+        }
+        .nav-list {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          right: 0;
+          top: 50px;
+          width: 100%;
+          text-align: center;
+          background-color: #ffff;
+          padding: 1rem;
+          /* border-top: 1px solid #000; */
+          box-shadow: 1px rgba(0, 0, 0, 0.1);
+        }
+        .icon {
+          display: flex;
+          font-size: 1.5rem;
+          cursor: pointer;
+          color: #000;
+        }
+        .nav-list.show {
+          display: flex;
+        }
+        .nav-list a:hover {
+          background-color: #444;
+          border-radius: 10px;
+          color: #ffff;
+          transition: 0.5s;
+        }
+      }
+      @media (max-width: 480px) {
+        .utama1 h1 {
+          font-size: 1.5rem;
+        }
+        .nav-list a {
+          font-size: 1rem;
+          padding: 1rem;
+        }
+        .icon {
+          font-size: 1.2rem;
+        }
+        nav {
+          padding: 1rem 1.5rem;
+        }
+      }
+      @media (max-width: 420px) {
+        .utama1 h1 {
+          font-size: 1.7rem;
+        }
+        .nav-list a {
+          font-size: 1.2rem;
+          padding: 1.2rem;
+        }
+        .icon {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- container 1 -->
+    <nav>
+      <div class="utama1">
+        <h1>Bakso Mang Ikin</h1>
+      </div>
+      <div class="nav-list">
+        <a href="">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+      <div class="icon" id="icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+    <script>
+      const icon = document.getElementById("icon");
+      const navList = document.querySelector(".nav-list");
+
+      icon.addEventListener("click", () => {
+        navList.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>
